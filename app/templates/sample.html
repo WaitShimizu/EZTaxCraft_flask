@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <body>
+    <link rel="stylesheet" href="/static/sample.css">
+    <div class="login">
+      <div class="login-screen">
+        <div class="login-form">
+          <div class="email-left">
+            <label for="email">ログインID</label><br/>
+          </div>
+          <div class="control-group">
+          <input type="text" class="login-field" value="" placeholder="メールアドレス" id="login-name">
+          <label class="login-field-icon fui-user" for="login-name"></label>
+          </div>
+          <div class="password-left">
+            <label for="password">パスワード</label>
+          </div>
+          <div class="control-group">
+          <input type="password" class="login-field" value="" placeholder="パスワード" id="login-pass">
+          <span id="view">
+            <!-- 目のアイコン -->
+            <button id="view"><i class="fa-regular fa-eye"></i></button>
+            <script src="https://kit.fontawesome.com/be91c86e75.js" crossorigin="anonymous"></script>
+        </span>
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+          <a class="login-link" href="#">メールアドレス/パスワードを忘れた方はこちら</a>
+          <a class="btn btn-primary btn-large btn-block" href="#">ログイン</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -56,15 +56,25 @@ body {
     margin: 3px 0 1.5px 80px;
     background: #dae3f3;
     width: 65%;
-    margin-right: auto;
+}
+.checkbox-background {
+    background: #dae3f3;
+    width: 100%;
+    height: 100%;
 }
 .checkbox-style {
     position: relative;
+    cursor: pointer;
     top: 1px;
+    box-sizing: border-box;
 }
+
 .checkbox-label {
-    word-break: break-all;
-    overflow-wrap : break-word;
+    position: relative;
+    padding-top: 6px;
+    line-height: 1.3;
+    text-align: left;
+    float: left;
 }
 
 .login-field {

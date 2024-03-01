@@ -54,9 +54,17 @@ body {
 
 .checkbox-frame {
     margin: 3px 0 1.5px 80px;
-    background: #e8e3e3;
+    background: #dae3f3;
     width: 65%;
     margin-right: auto;
+}
+.checkbox-style {
+    position: relative;
+    top: 1px;
+}
+.checkbox-label {
+    word-break: break-all;
+    overflow-wrap : break-word;
 }
 
 .login-field {

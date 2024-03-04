@@ -3,16 +3,44 @@
     <head>
         <meta charset="utf-8">
         <link href="static/css/sample.css" rel="stylesheet">
+        <title>練習画面</title>
     </head>
     <body>
+        <figure>
+            <img src="static/img/sampleロゴ.jpg" alt="会社のロゴ(仮)">
+            <figcaption>図1-会社のロゴ(仮)</figcaption>
+        </figure>
         <p>コードレビューで問題ない場合はLGTMとコメントして下さい</p>
         <p>
-            <abbr title="lok at me">LGTM</abbr>
+            <abbr title="今夜はYESです">LGTM</abbr>
             とは、コードレビューなどで特に
             <ruby>
                 問題<rp>(</rp><rt>もんだい</rt><rp>)</rp>
             </ruby>
             が見つからなかった場合に使う英語の略語です。
         </p>
+        <p>
+            このブックの公開日は
+            <time datetime="2024-03-03">2024/03/03</time>です。
+        </p>
+        <label>
+            好きな数字選んでね
+            <input type="number" min="0" max="50" step="1">
+        </label>
+        <label>
+            メールアドレス<input type="email">
+        </label>
+        <label>
+            日付<input type="date">
+        </label>
+        <label>
+            時間<input type="time">
+        </label>
+        <label>
+            進捗状況<progress value="30" max="100"></progress>
+        </label>
+        <video width="320" height="180" controls>
+            <source src="https://www.youtube.com/watch?v=rAT0pa_GykE&t=2563s" type="video/mp4">
+        </video>
     </body>
 </html>

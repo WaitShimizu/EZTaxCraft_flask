@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
@@ -10,12 +10,88 @@
     <body>
         <form>
             <label>必須入力チェック
-                <input type="password" name="length" minlength="8" maxlength="20" name="required" required></label>
+                [autofocus]はページ読み込み時にフォーカスを充てる。ページ内に1つだけしか使えない
+                <input type="password" name="length" minlength="8" maxlength="20" autofocus required></label>
             </label>
-
+            <button type="submit">送信</button>
+        </form>
+        [novalidate] 下記内容を無効化する
+        <form>
+            <label>先頭がaで始まらなければならない
+                <input class="text-input" name="regexp" pattern="^a.*"></label>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>名前
+                <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>メールアドレス
+                <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>電話番号
+                <input type="tel" name="tel" autocomplete="tel" required>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>郵便番号
+                [autocomplete="off"]入力補助を無効にする
+                <input type="postal-code" name="postal-code" autocomplete="off" required>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>プレースホルダー
+                <input type="email" name="email" placeholder="ntk042326@gmail.com" required>
+            </label>
+            <button type="submit">送信</button>
+        </form>
+        <form>
+            <label>スペルチェック
+                <p>「こんにちは」を英語でかく</p>
+                <input name="hello" spellcheck="true">
+            </label>
             <button type="submit">送信</button>
         </form>
         <label>フォームの送信値は次の通りです</label>
         <ul class="result"></ul>
     </body>
+</html>!-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5のinputを理解する</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>ご登録フォーム</legend>
+        <label>名前：<input type="text" name="name" autofocus required></label>
+        <p><label>住所：<input type="postal-code" name="postal-code" required></label></p>
+        <fieldset>
+        	<legend>データ1</legend>
+            <label>メールアドレス：
+          	<input type="email" name="email" placeholder="sample@gmail.com" autocomplete="email" required>
+          </label>
+          <p><label>パスワード：
+          	<input type="password" name="password" name="length" minlength="8" maxlength="20" required>
+          </label></p>
+        </fieldset>
+        <button type="submit">送信</button>
+    </form>
+    <p>フォームの送信値は次の通りです。</p>
+    <ul class="result"></ul>
+  </body>
 </html>

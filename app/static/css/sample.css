@@ -1,10 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
+@charset "UTF-8";
+
+li[class^="prep"] {
+    background: #a96c6c;
 }
-label {
-    display: block;
-    margin-bottom: 5px;
-    margin-right: 5px;
+
+li[class$="code"] {
+    background: #95d1d7
+}
+
+p:first-child {
+    background: #dcd3a7
 }

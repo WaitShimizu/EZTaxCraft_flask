@@ -8,30 +8,41 @@
 
 .tab_menu li {
 	list-style:none;
+	transition: .4s;
+}
+.tab_menu li:hover {
+	opacity: .7;
 }
 
 .tab_menu li a {
+	color: #fff;
+	font-weight: bold;
     display: block;
-    background: #ddd;
-    margin:0 2px;
+    background: #7f7f7f;
     padding:10px 20px;
-	color: inherit;
 	text-decoration: none;
+	border: #000000 solid 1px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	width: 130px;
+	text-align:center;
 }
-/*liにactiveクラスがついた時の形状*/
+/* liにactiveクラスがついた時の形状 */
 .tab_menu li.active a {
+	color: #447dcf;
+	font-weight: bold;
 	background:#fff;
 }
 
-/*エリアの表示非表示と形状*/
+/* エリアの表示非表示と形状 */
 .area {
-	display: none;/*はじめは非表示*/
-	opacity: 0;/*透過0*/
+	display: none;/* はじめは非表示 */
+	opacity: 0;/* 透過0 */
 	background: #fff;
 	padding:50px 20px;
 }
 
-/*areaにis-activeというクラスがついた時の形状*/
+/* areaにis-activeというクラスがついた時の形状 */
 .area.is-active {
     display: block;/*表示*/
     animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
@@ -46,4 +57,52 @@
 	to {
 		opacity: 1;
 	}
+}
+
+.wait_logo {
+	width: 190px;
+	height: 55px;
+	padding-left: 45px;
+}
+
+.btn-login {
+    position: absolute;
+	top:90px;
+	left: 700px;
+	width: 140px;
+	height:50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background: #5b9bd5;
+	border: 1px solid #4c81ca; /* 太さ 種類 色 */
+	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transition: .4s;
+}
+/* マウスがボタンに乗ったとき */
+.btn-login:hover {
+	opacity: .7;
+}
+
+.btn-regist {
+    position: absolute;
+	top:90px;
+	left: 840px;
+	width: 140px;
+	height:50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	background: #ed7d31;
+	border: 1px solid #c55a11; /* 太さ 種類 色 */
+	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transition: .4s;
+}
+/* マウスがボタンに乗ったとき */
+.btn-regist:hover {
+	opacity: .7;
 }

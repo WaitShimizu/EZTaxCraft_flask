@@ -8,47 +8,49 @@
         <script src="https://kit.fontawesome.com/be91c86e75.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="header_tab">
-            <ul class="tab_menu">
-                <li class="header_tab_registered">
-                    <a href="#registered" class="header_tab_registered_link">登録済みの方</a>
-                </li>
-                <li class="header_tab_unregistered">
-                    <a href="#unregistered" class="header_tab_unregistered_link">未登録の方</a>
-                </li>
-                <li class="header_tab_usage">
-                    <a href="#usage" class="header_tab_usage_link">使い方</a>
-                </li>
-            </ul>
-
-            <div id="registered" class="area">
-                <h2>かんたん帳簿</h2>
-                <ul>
-                    <li>帳簿を付ける</li>
-                    <li>帳簿を確認する</li>
-                    <li>帳簿を出力する</li>
-                    <li>申告書を作成する</li>
-                </ul>
-            <!--/area--></div>
-            <div id="unregistered" class="area">
-                <h2>かんたん帳簿</h2>
-                <ul>
-                    <li>登録方法</li>
-                    <li>登録後に出来ること</li>
-                    <li>よくある質問</li>
-                    <li>お知らせについて</li>
-                </ul>
-            <!--/area--></div>
-            <div id="usage" class="area">
-                <h2>かんたん帳簿</h2>
-                <ul>
-                    <li>帳簿の付け方</li>
-                    <li>帳簿の確認方法</li>
-                    <li>帳簿の出力方法</li>
-                    <li>申告書の作成方法</li>
-                </ul>
-            <!--/area--></div>
+        <ul class="tab_menu">
+            <li class="tab-link">
+                <a href="#registered">登録済みの方</a>
+            </li>
+            <li class="tab-link">
+                <a href="#unregistered">未登録の方</a>
+            </li>
+            <li class="tab-link">
+                <a href="#usage">使い方</a>
+            </li>
+        </ul>
+        <div class="body-header">
+            <a href=""><img class="wait_logo" src="static/img/wait_logo.png" alt="ワイトロゴ"></a>
+            <button class="btn-login" type="submit">ログイン</button>
+            <button class="btn-regist" type="submit">ユーザー登録</button>
         </div>
+        <div id="registered" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>帳簿を付ける</li>
+                <li>帳簿を確認する</li>
+                <li>帳簿を出力する</li>
+                <li>申告書を作成する</li>
+            </ul>
+        </div><!--/area-->
+        <div id="unregistered" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>登録方法</li>
+                <li>登録後に出来ること</li>
+                <li>よくある質問</li>
+                <li>お知らせについて</li>
+            </ul>
+        </div><!--/area-->
+        <div id="usage" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>帳簿の付け方</li>
+                <li>帳簿の確認方法</li>
+                <li>帳簿の出力方法</li>
+                <li>申告書の作成方法</li>
+            </ul>
+        </div><!--/area-->
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

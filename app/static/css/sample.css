@@ -3,10 +3,13 @@
 body {
 	background-color: #efefef;
 }
+
 /* タブの形状 */
 .tab_menu {
     display: flex;
     flex-wrap: wrap;
+	padding-left: 0px;
+	margin-top: 10px;
 }
 
 .tab_menu li {
@@ -20,6 +23,7 @@ body {
 .tab_menu li a {
 	color: #fff;
 	font-weight: bold;
+	font-size: 17px;
     display: block;
     background: #7f7f7f;
     padding:10px 20px;

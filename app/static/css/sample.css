@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body {
+	background-color: #efefef;
+}
 /* タブの形状 */
 .tab_menu {
     display: flex;
@@ -59,13 +62,18 @@
 	}
 }
 
-.wait_logo {
+.wait-logo {
 	width: 190px;
 	height: 55px;
 	padding-left: 45px;
+	transition: .4s;
+}
+/* マウスがボタンに乗ったとき */
+.wait-logo:hover {
+	opacity: .7;
 }
 
-.btn-login {
+#btn-login {
     position: absolute;
 	top:90px;
 	left: 700px;
@@ -82,11 +90,11 @@
 	transition: .4s;
 }
 /* マウスがボタンに乗ったとき */
-.btn-login:hover {
+#btn-login:hover {
 	opacity: .7;
 }
 
-.btn-regist {
+#btn-user-regist {
     position: absolute;
 	top:90px;
 	left: 840px;
@@ -103,6 +111,6 @@
 	transition: .4s;
 }
 /* マウスがボタンに乗ったとき */
-.btn-regist:hover {
+#btn-user-regist:hover {
 	opacity: .7;
 }

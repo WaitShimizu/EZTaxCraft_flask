@@ -1,0 +1,59 @@
+<!-- トップページ -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>トップページ</title>
+        <link rel="stylesheet" href="./static/css/sample.css">
+        <script src="https://kit.fontawesome.com/be91c86e75.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <ul class="tab_menu">
+            <li>
+                <a href="registered.html">登録済みの方</a>
+            </li>
+            <li>
+                <a href="#unregistered">未登録の方</a>
+            </li>
+            <li>
+                <a href="#usage">使い方</a>
+            </li>
+        </ul>
+        <div class="body-header">
+            <a href="/top"><img class="wait-logo" src="static/img/wait_logo.png" alt="ワイトロゴ"></a>
+            <a href="/login"><button id="btn-login">ログイン</button></a>
+            <a href="/user_regist"><button id="btn-user-regist" type="submit">ユーザー登録</button></a>
+        </div>
+        <div id="registered" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>帳簿を付ける</li>
+                <li>帳簿を確認する</li>
+                <li>帳簿を出力する</li>
+                <li>申告書を作成する</li>
+            </ul>
+        </div><!--/area-->
+        <div id="unregistered" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>登録方法</li>
+                <li>登録後に出来ること</li>
+                <li>よくある質問</li>
+                <li>お知らせについて</li>
+            </ul>
+        </div><!--/area-->
+        <div id="usage" class="area">
+            <h2>かんたん帳簿</h2>
+            <ul>
+                <li>帳簿の付け方</li>
+                <li>帳簿の確認方法</li>
+                <li>帳簿の出力方法</li>
+                <li>申告書の作成方法</li>
+            </ul>
+        </div><!--/area-->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./static/js/sample_n.js"></script>
+    </body>
+</html>

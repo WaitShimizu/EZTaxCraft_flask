@@ -222,6 +222,10 @@ input:checked + h2 > .tab-label{
 	font-weight: bold;
 }
 
+.form-wrapper a {
+	font-weight: normal;
+}
+
 .btn-panel_login {
 	background: #5b9bd5;
 	color: #fff;

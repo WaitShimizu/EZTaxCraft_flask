@@ -2,13 +2,15 @@
 
 body {
 	background-color: #efefef;
-	font-family:Arial
+	font-family:Arial;
+	height: 100%;
+	/* width: 100%; */
 }
+
 a {
 	color: #F00;
 	text-decoration:underline;
 }
-
 /* タブの形状 */
 .tab_menu {
     display: flex;
@@ -85,7 +87,6 @@ a {
 	width: 35px;
 	height: 30px;
 	left: 80%;
-	/* padding: 5px 0px 0px 810px; 上、右、下、左 */
 	transition: .4s;
 	position: relative;
 }
@@ -164,7 +165,6 @@ input:checked + h2 > .tab-label{
 	background-color: #fff;
 	height: 870px;
 	clear: both;
-	display: none; /*パネルを非表示*/
 }
 
 /* 選択されているチェックボックスに応じてパネルを表示 */
@@ -181,18 +181,24 @@ input:checked + h2 > .tab-label{
 .form-wrapper {
 	text-align: center;
 	background: #b4c7e7;
-	margin: 150px auto;
-	max-width: 370px;
-	height: 270px;
+	padding-top: 30px;
+	margin: 3% auto;
+	max-width: 400px;
+	height: 32%;
 }
+
 .form-item {
 	color: #fff;
 	font-weight: bold;
 }
 
 .form-item label {
-	padding: 0px 230px 0px 0px;
-	line-height: 50px;
+	font-size: 20px;
+	padding: 0px 228px 0px 0px;/* 上、右、下、左 */
+}
+
+.form-item-password {
+	padding-top: 30px;
 }
 
 ::placeholder {

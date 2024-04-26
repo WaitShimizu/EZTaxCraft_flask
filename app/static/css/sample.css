@@ -198,7 +198,7 @@ input:checked + h2 > .tab-label{
 }
 
 .form-item-password {
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 ::placeholder {
@@ -217,6 +217,9 @@ input:checked + h2 > .tab-label{
 .form-wrapper p {
 	font-size: 13px;
 	color: #fff;
+	text-align: center;
+	padding: 15px 0px 10px;
+	font-weight: bold;
 }
 
 .btn-panel_login {
@@ -224,9 +227,9 @@ input:checked + h2 > .tab-label{
 	color: #fff;
 	border: 1px solid #4c81ca;
 	font-weight: bold; /* 文字を太くする */
-	font-size: 17px;
-	width: 120px; /* 丸の横幅 */
-  	height: 35px; /* 丸の高さ */
+	font-size: 19px;
+	width: 130px; /* 丸の横幅 */
+  	height: 38px; /* 丸の高さ */
 	text-align: center;
 	border-radius: 6px;
 	transition: .4s;

@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./static/css/sample.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <title>ログイン</title>
     </head>
     <body>
@@ -15,12 +16,15 @@
             <div class="form-wrapper">
                 <form>
                     <div class="form-item">
-                        <label for="email">ログインID</label><br>
-                        <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
-                    </div>
-                    <div class="form-item form-item-password">
-                        <label for="password">パスワード</label><br>
-                        <input type="password" name="password" required="required" placeholder="パスワード"></input>
+                        <div class="form-item_login">
+                            <label for="email">ログインID</label><br>
+                            <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
+                        </div>
+                        <div class="form-item_password">
+                            <label for="password">パスワード</label><br>
+                            <input id="password" type="password" name="password" required="required" placeholder="パスワード"></input>
+                            <span id="btn-eye" class="fa fa-eye" onclick="pushHideButton()"></span>
+                        </div>
                     </div>
                     <p>メールアドレス/パスワードを忘れた方は<a href="https://www.google.co.jp/">こちら</a></p>
                     <div class="btn-panel">

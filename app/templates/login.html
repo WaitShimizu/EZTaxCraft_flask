@@ -8,7 +8,7 @@
         <title>ログイン</title>
     </head>
     <body>
-        <!-- <a href="/top"><img class="wait-logo" src="static/img/menu_icon.png" alt="メニューボタン"></a> -->
+        <a href="/top" class="menu_logo"><img src="static/img/menu_icon.png" alt="メニューボタン"></a>
         <input id="login-tab" type="radio" role="tab" name="tab-radio" class="tab-input" value="usage" checked="">
         <label class="tab-label">ログイン</label>
         <div class="tab-panel login" role="tabpanel">
@@ -23,13 +23,11 @@
                         <div class="form-item_password">
                             <label for="password">パスワード</label><br>
                             <input id="password" type="password" name="password" required="required" placeholder="パスワード"></input>
-                            <span id="btn-eye" class="fa fa-eye" onclick="pushHideButton()"></span>
+                            <label for="checkPassword" class="fa fa-eye"></label>
                         </div>
                     </div>
-                    <p>メールアドレス/パスワードを忘れた方は<a href="https://www.google.co.jp/">こちら</a></p>
-                    <div class="btn-panel">
-                        <button class="btn-panel_login" type="submit">ログイン</button>
-                    </div>
+                    <p>メールアドレス / パスワードを忘れた方は<a href="https://www.google.co.jp/">こちら</a></p>
+                    <button class="btn-panel_login" type="submit">ログイン</button>
                 </form>
             </div>
         </div>

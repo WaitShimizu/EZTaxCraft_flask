@@ -6,9 +6,9 @@ body {
 	height: 100%;
 }
 
-a {
-	color: #F00;
-	text-decoration:underline;
+.menu_logo {
+	position: fixed;
+	right: 1%;
 }
 
 .wait-logo {

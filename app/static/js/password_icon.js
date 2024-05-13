@@ -10,13 +10,13 @@ function onClickView() {
     //  passwordからtextへ
     if(inputtype.type === 'password'){
         inputtype.type = 'text';
-        viewicon.className = 'far fa-eye';
+        viewicon.className = 'far fa-eye-slash';
         console.log("Clicked! 1");
 
     //  textからpasswordへ
     } else {
         inputtype.type = 'password';
-        viewicon.className = 'far fa-eye-slash';
+        viewicon.className = 'far fa-eye';
         console.log("Clicked! 2");
     }
 };

@@ -6,7 +6,7 @@ body {
 	height: 100%;
 }
 
-.menu_logo {
+.menu_icon {
 	position: fixed;
 	right: 1%;
 }
@@ -42,7 +42,7 @@ input[name="tab-radio"] {
 	text-align: center;
 }
 
-.tab-panel{
+.login-tab{
 	background-color: #fff;
 	height: 870px;
 	clear: both;
@@ -82,11 +82,27 @@ input[name="tab-radio"] {
 	color: #a6a6a6;
 }
 
-.form-wrapper input {
+.form-item_login-id input {
 	border-radius:0.2rem;
 	border: none;
 	padding: 8px;
 	width: 80%;
+}
+
+.form-item_password input {
+	/* border-radius:0.2rem; */
+	border: none;
+	padding: 8px;
+	width: 70%;
+	background: transparent;
+}
+
+.form-item_password-input {
+	border-radius:0.2rem;
+	border: none;
+	width: 70%;
+	background: white;
+	margin-left: 35px;
 }
 
 .form-wrapper p {

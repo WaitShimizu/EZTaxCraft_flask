@@ -74,6 +74,7 @@ input[name="tab-radio"] {
 #view {
 	border: none;
 	background: transparent;
+	color: #a6a6a6;
 }
 
 ::placeholder {

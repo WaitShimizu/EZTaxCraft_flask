@@ -108,7 +108,6 @@ input[name="tab-radio"] {
 	padding-right: 65px;
 }
 
-/* 後で復活 */
 /* 入力枠削除 */
 :focus {
     outline: none;

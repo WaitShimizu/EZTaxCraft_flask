@@ -90,19 +90,28 @@ input[name="tab-radio"] {
 }
 
 .form-item_password input {
-	/* border-radius:0.2rem; */
 	border: none;
 	padding: 8px;
-	width: 70%;
 	background: transparent;
 }
 
 .form-item_password-input {
 	border-radius:0.2rem;
 	border: none;
-	width: 70%;
 	background: white;
-	margin-left: 35px;
+	margin-left: 33px;
+	width: 84%;
+}
+
+.form-item_password-input input {
+	width: 230px;
+	padding-right: 65px;
+}
+
+/* 後で復活 */
+/* 入力枠削除 */
+:focus {
+    outline: none;
 }
 
 .form-wrapper p {

@@ -42,7 +42,7 @@ input[name="tab-radio"] {
 	text-align: center;
 }
 
-.login-tab{
+.user-regist-tab{
 	background-color: #fff;
 	height: 870px;
 	clear: both;
@@ -50,11 +50,11 @@ input[name="tab-radio"] {
 
 .form-wrapper {
 	text-align: center;
-	background: #b4c7e7;
+	background: #f8cbad;
 	padding-top: 30px;
 	margin: 3% auto;
 	max-width: 400px;
-	height: 32%;
+	height: 40%;
 }
 
 .form-item {
@@ -83,7 +83,11 @@ input[name="tab-radio"] {
 	color: #a6a6a6;
 }
 
-.form-item_login-id input {
+.form-item_user-regist label {
+	padding: 0px 110px 0px 0px;/* 上、右、下、左 */
+}
+
+.form-item_user-regist input {
 	border-radius:0.2rem;
 	border: none;
 	padding: 8px;
@@ -116,7 +120,7 @@ input[name="tab-radio"] {
 
 .form-wrapper p {
 	font-size: 13px;
-	color: #fff;
+	color: #ff0000;
 	text-align: center;
 	padding: 15px 0px 10px;
 	font-weight: bold;
@@ -124,12 +128,13 @@ input[name="tab-radio"] {
 
 .form-wrapper a {
 	font-weight: normal;
+	color: #5B9BD5;
 }
 
-.btn-panel_login {
-	background: #5b9bd5;
+.btn-panel_regist {
+	background: #d9d9d9;
 	color: #fff;
-	border: 1px solid #4c81ca;
+	border: 1px solid #adadad;
 	font-weight: bold; /* 文字を太くする */
 	font-size: 19px;
 	width: 130px; /* 丸の横幅 */
@@ -140,7 +145,7 @@ input[name="tab-radio"] {
 }
 
 /* マウスがボタンに乗ったとき */
-.btn-panel_login:hover {
+.btn-panel_regist:hover {
 	opacity: .7;
 }
 

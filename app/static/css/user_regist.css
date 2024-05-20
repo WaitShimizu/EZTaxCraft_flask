@@ -1,32 +1,36 @@
 @charset "UTF-8";
 
+/* 画面全体 */
 body {
 	background-color: #efefef;
 	font-family:Arial;
 	height: 100%;
 }
 
+/* メニューアイコン */
 .menu-icon {
 	position: fixed;
 	right: 1%;
 }
 
+/* ワイトロゴ */
 .wait-logo {
 	width: 228px;
 	height: 56px;
 	padding: 10px 0px 0px 35px;
 	transition: .4s;
 }
-/* マウスがボタンに乗ったとき */
+/* ワイトロゴにマウスが乗ったとき */
 .wait-logo:hover {
 	opacity: .7;
 }
 
-/*ラジオボタンを全て非表示に*/
+/*ラベルのラジオボタンを全て非表示に*/
 input[name="tab-radio"] {
 	display: none;
 }
 
+/* 画面左上のタブ */
 .tab-label{
 	background-color: #fff;
 	color: #447dcf;
@@ -54,7 +58,7 @@ input[name="tab-radio"] {
 	padding-top: 30px;
 	margin: 3% auto;
 	max-width: 400px;
-	height: 40%;
+	height: 38%;
 }
 
 .form-item {
@@ -75,6 +79,14 @@ input[name="tab-radio"] {
 	border: none;
 	background: transparent;
 	color: #a6a6a6;
+}
+
+.form-item_repassword {
+	padding-top: 20px;
+}
+
+.form-item_repassword label {
+	padding: 0px 170px 0px 0px;/* 上、右、下、左 */
 }
 
 ::placeholder {
@@ -113,6 +125,31 @@ input[name="tab-radio"] {
 	padding-right: 65px;
 }
 
+.form-item_repassword input {
+	border: none;
+	padding: 8px;
+	background: transparent;
+}
+
+.form-item_repassword-input {
+	border-radius:0.2rem;
+	border: none;
+	background: white;
+	margin-left: 33px;
+	width: 84%;
+}
+
+.form-item_repassword-input input {
+	width: 230px;
+	padding-right: 65px;
+}
+
+#re-view {
+	border: none;
+	background: transparent;
+	color: #a6a6a6;
+}
+
 /* 入力枠削除 */
 :focus {
     outline: none;
@@ -134,11 +171,14 @@ input[name="tab-radio"] {
 .btn-panel_regist {
 	background: #d9d9d9;
 	color: #fff;
-	border: 1px solid #adadad;
+	border: 1px solid #d9d9d9;
 	font-weight: bold; /* 文字を太くする */
 	font-size: 19px;
-	width: 130px; /* 丸の横幅 */
+	width: 160px; /* 丸の横幅 */
   	height: 38px; /* 丸の高さ */
+	position:relative;
+	top: -72px;
+	left: 73px;
 	text-align: center;
 	border-radius: 6px;
 	transition: .4s;
@@ -147,6 +187,38 @@ input[name="tab-radio"] {
 /* マウスがボタンに乗ったとき */
 .btn-panel_regist:hover {
 	opacity: .7;
+}
+
+#consent-color {
+	color: #000000;
+	position:relative;
+	top: -20px;
+	left: -98px;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	top: -72px;
+	left: 60px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	vertical-align: -5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+position: absolute;
+top: 1px;
+left: 4px;
+transform: rotate(50deg);
+width: 4px;
+height: 8px;
+border-right: 2px solid #fff;
+border-bottom: 2px solid #fff;
+content: '';
 }
 
 #btn-eye {

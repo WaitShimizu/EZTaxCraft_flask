@@ -8,7 +8,7 @@
         <!-- パスワード用の目のアイコンを読み込み -->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <!-- パスワード用の目のアイコンクリック時の処理 -->
-        <script src="./static/js/password_icon.js"></script>
+        <!-- <script src="./static/js/password_icon.js"></script> -->
         <title>ユーザー登録</title>
     </head>
     <body>
@@ -41,12 +41,13 @@
                             </div>
                         </div>
                     </div>
-                    <p>※<a href="https://www.google.co.jp/">こちら</a> から利用規約事項を確認してください</p>
-                    <p id="consent-color">利用規約に同意します</p>
-                    <input type="checkbox" id="name">
-                    <button class="btn-panel_regist" type="submit">ユーザー登録</button>
-                    </form>
+                    <p class="agreement-link">※<a href="https://www.google.co.jp/">こちら</a> から利用規約事項を確認してください</p>
+                    <p class="agreement-y">利用規約に同意します</p>
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <button id="btn-regist" type="submit">ユーザー登録</button>
+                </form>
             </div>
         </div>
+        <script src="./static/js/password_icon.js"></script>
     </body>
 </html>

@@ -3,8 +3,19 @@
 /* 画面全体 */
 body {
 	background-color: #efefef;
-	font-family:Arial;
+	/* Arialを使い、フォールバックにsans-serifを追加 */
+	font-family: Arial, sans-serif;
 	height: 100%;
+}
+
+/* フォントの継承を強制 */
+* {
+    font-family: inherit; /* 親要素からフォントを継承 */
+}
+
+/* 入力フィールドや他の要素にもフォントを継承させる */
+input, textarea, button, label {
+    font-family: inherit; /* 親要素からフォントを継承 */
 }
 
 /* メニューアイコン */
@@ -155,7 +166,7 @@ input[name="tab-radio"] {
     outline: none;
 }
 
-.form-wrapper p {
+.agreement-link {
 	font-size: 13px;
 	color: #ff0000;
 	text-align: center;
@@ -168,7 +179,7 @@ input[name="tab-radio"] {
 	color: #5B9BD5;
 }
 
-.btn-panel_regist {
+#btn-regist {
 	background: #d9d9d9;
 	color: #fff;
 	border: 1px solid #d9d9d9;
@@ -177,7 +188,7 @@ input[name="tab-radio"] {
 	width: 160px; /* 丸の横幅 */
   	height: 38px; /* 丸の高さ */
 	position:relative;
-	top: -72px;
+	top: -52px;
 	left: 73px;
 	text-align: center;
 	border-radius: 6px;
@@ -185,20 +196,22 @@ input[name="tab-radio"] {
 }
 
 /* マウスがボタンに乗ったとき */
-.btn-panel_regist:hover {
+#btn-regist:hover {
 	opacity: .7;
 }
 
-#consent-color {
+.agreement-y {
+	font-size: 13px;
 	color: #000000;
 	position:relative;
-	top: -20px;
+	top: -10px;
 	left: -98px;
+	font-weight: bold;
 }
 
 input[type="checkbox"] {
 	position: relative;
-	top: -72px;
+	top: -52px;
 	left: 60px;
 	width: 16px;
 	height: 16px;

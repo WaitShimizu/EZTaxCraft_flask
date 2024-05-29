@@ -1,7 +1,7 @@
 "use strict";
 
 //  id="view"クリック時の処理を設定
-function onClickView() {
+function onClickPassView() {
     //  id="view"を取得
     let viewicon = document.getElementById('view');
     //  id="password"を取得

@@ -1,4 +1,5 @@
 "use strict";
+// --- パスワード入力表示切替設定 --- //
 
 //  id="view"クリック時の処理を設定
 function onClickPassView() {
@@ -20,18 +21,3 @@ function onClickPassView() {
         console.log("Clicked! 2");
     }
 };
-
-
-// チェックボックスイベント処理
-let element = document.getElementById('agreement');
-element.addEventListener('change', function(click_element){
-
-    //ここにイベントの内容を記述
-    if (element.checked == true){
-        //利用規約に同意していた場合に処理する内容を記述する
-
-    } else {
-        //利用規約に同意しない場合に処理する内容を記述する
-        // ※何も処理しない(ボタンを非活性に設定する必要を考慮する)
-    }
-});

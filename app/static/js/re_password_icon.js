@@ -1,4 +1,5 @@
 "use strict";
+// --- パスワード再入力表示切替設定 --- //
 
 //  id="view"クリック時の処理を設定
 function onClickRePassView() {

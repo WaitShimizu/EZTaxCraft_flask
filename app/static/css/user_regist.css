@@ -2,7 +2,7 @@
 
 /* 画面全体 */
 body {
-	background-color: #efefef;
+	background: #efefef;
 	/* Arialを使い、フォールバックにsans-serifを追加 */
 	font-family: Arial, sans-serif;
 	height: 100%;
@@ -43,7 +43,7 @@ input[name="tab-radio"] {
 
 /* 画面左上のタブ */
 .tab-label{
-	background-color: #fff;
+	background: #fff;
 	color: #447dcf;
 	font-weight: bold;
 	cursor: pointer;
@@ -58,7 +58,7 @@ input[name="tab-radio"] {
 }
 
 .user-regist-tab{
-	background-color: #fff;
+	background: #fff;
 	height: 870px;
 	clear: both;
 }
@@ -180,9 +180,9 @@ input[name="tab-radio"] {
 }
 
 #btn-regist {
-	background: #d9d9d9;
+	background: #ED7D31;
 	color: #fff;
-	border: 1px solid #d9d9d9;
+	border: 1px solid #ED7D31;
 	font-weight: bold; /* 文字を太くする */
 	font-size: 19px;
 	width: 160px; /* 丸の横幅 */
@@ -193,6 +193,13 @@ input[name="tab-radio"] {
 	text-align: center;
 	border-radius: 6px;
 	transition: .4s;
+	cursor: pointer;/* ポインターカーソルを表示 */
+}
+/* ボタン無効時 */
+#btn-regist[disabled] {
+	background: #d9d9d9;
+	border: 1px solid #d9d9d9;
+	cursor: not-allowed; /* クリック不可のカーソルを表示 */
 }
 
 /* マウスがボタンに乗ったとき */

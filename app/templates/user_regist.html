@@ -30,14 +30,14 @@
                             <label for="password">パスワード</label>
                             <div class="form-item_password-input">
                                 <input id="password" type="password" name="password" required="required" placeholder="パスワード"></input>
-                                <button id="view" onclick="onClickPassView()" for="password" class="far fa-eye" type="button"></button>
+                                <button id="view" onclick="onClickPassView('view', 'password')" for="password" class="far fa-eye" type="button"></button>
                             </div>
                         </div>
                         <div class="form-item_repassword">
                             <label for="password">パスワード再入力</label>
                             <div class="form-item_repassword-input">
                                 <input id="re-password" type="password" name="password" required="required" placeholder="パスワード"></input>
-                                <button id="re-view" onclick="onClickRePassView()" for="password" class="far fa-eye" type="button"></button>
+                                <button id="re-view" onclick="onClickPassView('re-view', 're-password')" for="password" class="far fa-eye" type="button"></button>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,7 @@
                 </form>
             </div>
         </div>
-        <script src="./static/js/password_icon.js"></script>
-        <script src="./static/js/re_password_icon.js"></script>
+        <script src="./static/js/password_eye_ctrl.js"></script>
         <script src="./static/js/regist_btn_press_ctrl.js"></script>
     </body>
 </html>

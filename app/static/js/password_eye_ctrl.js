@@ -1,12 +1,12 @@
 "use strict";
 // --- パスワード入力表示切替設定 --- //
 
-//  id="view"クリック時の処理を設定
-function onClickPassView() {
-    //  id="view"を取得
-    let viewicon = document.getElementById('view');
-    //  id="password"を取得
-    let inputtype = document.getElementById('password');
+//  id="view"または"re-view"クリック時の処理を設定
+function onClickPassView(viewIdName, inputTypeName) {
+    //  id="view"または"re-view"を取得
+    let viewicon = document.getElementById(viewIdName);
+    //  id="password"または"re-password"を取得
+    let inputtype = document.getElementById(inputTypeName);
 
     //  passwordからtextへ
     if(inputtype.type === 'password'){

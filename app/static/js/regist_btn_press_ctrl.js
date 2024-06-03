@@ -1,6 +1,7 @@
 "use strict";
 // --- ユーザー登録ボタン押下設定 --- //
 
+// HTMLのロードが完了した後にJavaScriptのコードが実行される
 document.addEventListener('DOMContentLoaded', () => {
   function updateState() {
     // メールアドレスを取得
@@ -14,10 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // 送信ボタンを取得
     const submitBtn = document.getElementById("btn-regist");
 
-    // メールアドレス、パスワード、再入力パスワードが入力され、
-    // パスワードと再入力パスワードが一致し、
-    // かつチェックボックスにチェックが入っている場合にボタンを有効化
-    const isValid = email !== '' && password !== '' && rePassword !== '' && (password === rePassword) && agreeChecked;
+    // disabled判定用定数
+    let isValid = true;
+
+    // チェックボックスにチェックが入ってるか確認
+    if (agreeChecked === false) {
+      // チェックが入っていない場合何もしない
+      isValid = false;
+    }
+
+    // メールアドレス、パスワード、再パスワードが入力されているか確認
+    if ((email === '') || (password === '') || (rePassword === '')) {
+      // メールアドレス、パスワード、再パスワードが空の場合は何もしない
+      isValid = false;
+    }
+
+    // パスワードと再パスワードが一致しているか確認
+    if (password !== rePassword) {
+      // パスワードと再パスワードが一致してなければ何もしない
+      isValid = false;
+    }
+
+    // ボタンを有効化
     submitBtn.disabled = !isValid;
   }
 
@@ -28,18 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('agreement').addEventListener('change', updateState);
 
 });
-// // チェックボックスをクリックした時
-// agreeCheckbox.addEventListener("click", () => {
-//   // チェックされている場合
-//   if (agreeCheckbox.checked === true) {
-//     submitBtn.disabled = false; // disabledを外す
-//     if () {
-
-//     }
-//   }
-//   // チェックされていない場合
-//   else {
-//     submitBtn.disabled = true; // disabledを付与
-//   }
-// });
-

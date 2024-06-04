@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById("email").value.trim();
     // パスワードを取得
     const password = document.getElementById("password").value.trim();
-    // 再入力パスワードを取得
+    // 再パスワードを取得
     const rePassword = document.getElementById("re-password").value.trim();
     // 「同意する」のチェックボックスを取得
     const agreeChecked = document.getElementById("agreement").checked;

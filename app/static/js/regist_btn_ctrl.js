@@ -1,8 +1,9 @@
-"use strict";
-// --- ユーザー登録ボタン押下設定 --- //
-
-// HTMLのロードが完了した後にJavaScriptのコードが実行される
 document.addEventListener('DOMContentLoaded', () => {
+  function validatePassword(password) {
+    const regex = /^[a-zA-Z0-9]{8,20}$/;
+    return regex.test(password);
+  }
+
   function updateState() {
     // メールアドレスを取得
     const email = document.getElementById("email").value.trim();
@@ -14,26 +15,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const agreeChecked = document.getElementById("agreement").checked;
     // 送信ボタンを取得
     const submitBtn = document.getElementById("btn-regist");
+    // エラーメッセージを表示する要素を取得
+    const errorMessageElement = document.getElementById("error-msg");
 
     // disabled判定用定数
     let isValid = true;
 
     // チェックボックスにチェックが入ってるか確認
-    if (agreeChecked === false) {
+    if (!agreeChecked) {
       // チェックが入っていない場合何もしない
       isValid = false;
     }
 
     // メールアドレス、パスワード、再パスワードが入力されているか確認
-    if ((email === '') || (password === '') || (rePassword === '')) {
+    if (email === '' || password === '' || rePassword === '') {
       // メールアドレス、パスワード、再パスワードが空の場合は何もしない
       isValid = false;
     }
 
-    // パスワードと再パスワードが一致しているか確認
-    if (password !== rePassword) {
-      // パスワードと再パスワードが一致してなければ何もしない
+    // パスワードの形式を確認
+    if (!validatePassword(password)) {
+      // パスワードの形式が正しくない場合
+      errorMessageElement.textContent = "※8文字以上20文字以内の半角英数字で入力してください";
       isValid = false;
+    } else if (password !== rePassword) {
+      // パスワードと再パスワードが一致しているか確認
+      errorMessageElement.textContent = "※パスワードが一致しません";
+      isValid = false;
+    } else {
+      errorMessageElement.textContent = ""; // エラーメッセージをクリア
     }
 
     // ボタンを有効化
@@ -45,5 +55,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('password').addEventListener('input', updateState);
   document.getElementById('re-password').addEventListener('input', updateState);
   document.getElementById('agreement').addEventListener('change', updateState);
-
 });

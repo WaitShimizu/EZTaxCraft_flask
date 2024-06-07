@@ -61,9 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         password,
         "※8文字以上20文字以内の半角英数字で入力してください",
         "error-pass-msg",
-        110);
-        // ボタンを無効化
-        isDisable = true;
+        110
+      );
+      // ボタンを無効化
+      isDisable = true;
 
     } else {
       // エラーメッセージをクリア

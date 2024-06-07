@@ -40,17 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordVal = password.value.trim();
     const rePasswordVal = rePassword.value.trim();
 
-    // disabled判定用定数
-    let isValid = true;
+    // disabled判定用定数(true:ボタンの無効化, false:ボタンの有効化)
+    let isDisable = false;
 
     // チェックボックスにチェックが入ってるか確認
     if (!agreeChecked) {
-      isValid = false;
+      // ボタンを無効化
+      isDisable = true;
     }
 
     // メールアドレス、パスワード、再パスワードが入力されているか確認
     if (email === '' || passwordVal === '' || rePasswordVal === '') {
-      isValid = false;
+      // ボタンを無効化
+      isDisable = true;
     }
 
     // パスワードの形式を確認
@@ -60,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "※8文字以上20文字以内の半角英数字で入力してください",
         "error-pass-msg",
         110);
-      isValid = false;
+        // ボタンを無効化
+        isDisable = true;
 
     } else {
       // エラーメッセージをクリア
@@ -74,14 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
         "error-repass-msg",
         170
       );
-      isValid = false;
+      // ボタンを無効化
+      isDisable = true;
+
     } else {
       // エラーメッセージをクリア
       hideTooltip("error-repass-msg");
     }
 
     // ボタンを有効化
-    submitBtn.disabled = !isValid;
+    submitBtn.disabled = isDisable;
   }
 
   // フォーム内の各要素のフォーカスイベントを監視して、パスワードフィールドがフォーカスされているかどうかを確認する

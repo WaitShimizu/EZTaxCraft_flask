@@ -1,34 +1,49 @@
 @charset "UTF-8";
 
+/* 画面全体 */
 body {
-	background-color: #efefef;
-	font-family:Arial;
+	background: #efefef;
+	/* Arialを使い、フォールバックにsans-serifを追加 */
+	font-family: Arial, sans-serif;
 	height: 100%;
 }
 
+/* フォントの継承を強制 */
+* {
+    font-family: inherit; /* 親要素からフォントを継承 */
+}
+
+/* 入力フィールドや他の要素にもフォントを継承させる */
+input, textarea, button, label {
+    font-family: inherit; /* 親要素からフォントを継承 */
+}
+
+/* メニューアイコン */
 .menu-icon {
 	position: fixed;
 	right: 1%;
 }
 
+/* ワイトロゴ */
 .wait-logo {
 	width: 228px;
 	height: 56px;
 	padding: 10px 0px 0px 35px;
 	transition: .4s;
 }
-/* マウスがボタンに乗ったとき */
+/* ワイトロゴにマウスが乗ったとき */
 .wait-logo:hover {
 	opacity: .7;
 }
 
-/*ラジオボタンを全て非表示に*/
+/*ラベルのラジオボタンを全て非表示に*/
 input[name="tab-radio"] {
 	display: none;
 }
 
+/* 画面左上のタブ */
 .tab-label{
-	background-color: #fff;
+	background: #fff;
 	color: #447dcf;
 	font-weight: bold;
 	cursor: pointer;
@@ -42,19 +57,19 @@ input[name="tab-radio"] {
 	text-align: center;
 }
 
-.login-tab{
-	background-color: #fff;
+.user-regist-tab{
+	background: #fff;
 	height: 870px;
 	clear: both;
 }
 
 .form-wrapper {
 	text-align: center;
-	background: #b4c7e7;
+	background: #f8cbad;
 	padding-top: 30px;
 	margin: 3% auto;
 	max-width: 400px;
-	height: 32%;
+	height: 38%;
 }
 
 .form-item {
@@ -77,13 +92,25 @@ input[name="tab-radio"] {
 	color: #a6a6a6;
 }
 
+.form-item_repassword {
+	padding-top: 20px;
+}
+
+.form-item_repassword label {
+	padding: 0px 170px 0px 0px;/* 上、右、下、左 */
+}
+
 ::placeholder {
 	font-size: 13px;
 	padding: 0px 5px; /* 上、右 */
 	color: #a6a6a6;
 }
 
-.form-item_login-id input {
+.form-item_user-regist label {
+	padding: 0px 110px 0px 0px;/* 上、右、下、左 */
+}
+
+.form-item_user-regist input {
 	border-radius:0.2rem;
 	border: none;
 	padding: 8px;
@@ -109,41 +136,133 @@ input[name="tab-radio"] {
 	padding-right: 65px;
 }
 
+.form-item_repassword input {
+	border: none;
+	padding: 8px;
+	background: transparent;
+}
+
+.form-item_repassword-input {
+	border-radius:0.2rem;
+	border: none;
+	background: white;
+	margin-left: 33px;
+	width: 84%;
+}
+
+.form-item_repassword-input input {
+	width: 230px;
+	padding-right: 65px;
+}
+
+#re-view {
+	border: none;
+	background: transparent;
+	color: #a6a6a6;
+}
+
 /* 入力枠削除 */
 :focus {
     outline: none;
 }
 
-.form-wrapper p {
+.agreement-link {
 	font-size: 13px;
-	color: #fff;
+	color: #ff0000;
 	text-align: center;
-	padding: 15px 0px 10px;
+	padding: 10px 0px 20px;
 	font-weight: bold;
 }
 
 .form-wrapper a {
 	font-weight: normal;
+	color: #5B9BD5;
 }
 
-.btn-panel_login {
-	background: #5b9bd5;
+#btn-regist {
+	background: #ED7D31;
 	color: #fff;
-	border: 1px solid #4c81ca;
+	border: 1px solid #ED7D31;
 	font-weight: bold; /* 文字を太くする */
 	font-size: 19px;
-	width: 130px; /* 丸の横幅 */
+	width: 160px; /* 丸の横幅 */
   	height: 38px; /* 丸の高さ */
+	position:relative;
+	top: -52px;
+	left: 73px;
 	text-align: center;
 	border-radius: 6px;
 	transition: .4s;
+	cursor: pointer;/* ポインターカーソルを表示 */
+}
+/* ボタン無効時 */
+#btn-regist[disabled] {
+	background: #d9d9d9;
+	border: 1px solid #d9d9d9;
+	cursor: not-allowed; /* クリック不可のカーソルを表示 */
 }
 
 /* マウスがボタンに乗ったとき */
-.btn-panel_login:hover {
+#btn-regist:hover {
 	opacity: .7;
+}
+
+.agreement-y {
+	font-size: 13px;
+	color: #000000;
+	position:relative;
+	top: -10px;
+	left: -98px;
+	font-weight: bold;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	top: -52px;
+	left: 60px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	vertical-align: -5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+position: absolute;
+top: 1px;
+left: 4px;
+transform: rotate(50deg);
+width: 4px;
+height: 8px;
+border-right: 2px solid #fff;
+border-bottom: 2px solid #fff;
+content: '';
 }
 
 #btn-eye {
 	color: #a6a6a6;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f44336;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f44336 transparent transparent transparent;
 }

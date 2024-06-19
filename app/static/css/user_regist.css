@@ -19,9 +19,14 @@ input, textarea, button, label {
 }
 
 /* メニューアイコン */
-.menu-icon {
+.global_setting {
 	position: fixed;
 	right: 1%;
+}
+
+.global_setting img {
+	height: 30px;
+	width: 30px;
 }
 
 /* ワイトロゴ */

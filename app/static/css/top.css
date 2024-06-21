@@ -6,13 +6,22 @@ body {
 	height: 100%;
 }
 
+.global_setting {
+	position: fixed;
+	right: 1%;
+}
+
+.global_setting img {
+	height: 30px;
+	width: 30px;
+}
+
 .body-container {
 	position: relative;
     background-color: #fff; /* 背景色を設定 */
 	height: 820px;
-	top: -17px; /* 上部に56px移動 */
+	top: -18px; /* 上部に移動 */
     padding: 35px 80% 0px 0px; /* 内側の余白を設定 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて浮き上がらせる */
 }
 
 /* タブの形状 */
@@ -47,6 +56,7 @@ body {
 	color: #447dcf;
 	font-weight: bold;
 	background:#fff;
+	border: none;
 }
 
 /* エリアの表示非表示と形状 */
@@ -109,7 +119,7 @@ button {
 /* ボタンを右端に固定し横に並べるためのスタイル */
 .btn-container {
 	position: absolute;
-	top: 80px; /* 上からの位置を調整 */
+	top: 25px; /* 上からの位置を調整 */
 	right: 30px; /* 右端からの位置を調整 */
 	display: flex;
 	flex-direction: row; /* ボタンを横に並べる */

@@ -108,7 +108,7 @@ button {
 
 /* ボタンを右端に固定し横に並べるためのスタイル */
 .btn-container {
-	position: fixed;
+	position: absolute;
 	top: 80px; /* 上からの位置を調整 */
 	right: 30px; /* 右端からの位置を調整 */
 	display: flex;

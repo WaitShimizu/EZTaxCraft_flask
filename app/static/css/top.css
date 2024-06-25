@@ -9,6 +9,7 @@ body {
 .global_setting {
 	position: fixed;
 	right: 1%;
+	top: 20px;
 }
 
 .global_setting img {
@@ -131,4 +132,44 @@ button {
 #btn-login:hover,
 #btn-user-regist:hover {
 	opacity: .7;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap; /* 初期設定では折り返さない */
+    width: 100%; /* リスト全体を画面いっぱいに広げる */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* アイテム内のコンテンツを中央揃え */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* ボックスサイズをボーダーとパディングを含める */
+    white-space: nowrap; /* テキストを折り返さない */
+    flex: 1; /* フレックスアイテムの幅を等しく */
+}
+
+/* メディアクエリ: 画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-wrap: wrap; /* 画面幅が狭くなると折り返しを許可 */
+    }
+
+    .nav-item {
+        flex: 1 1 calc(50% - 2px); /* 2つのアイテムが並ぶように設定（境界線のスペースを考慮） */
+        margin-bottom: 2px; /* 境界線のスペースを考慮 */
+    }
+}
+
+/* メディアクエリ: 画面幅が480px以下の場合 */
+@media (max-width: 480px) {
+    .nav-item {
+        flex: 1 1 100%; /* 1つのアイテムが並ぶように設定 */
+        margin-bottom: 2px; /* 境界線のスペースを考慮 */
+    }
 }

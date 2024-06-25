@@ -32,11 +32,12 @@ input, textarea, button, label {
 
 /* ワイトロゴ */
 .wait-logo {
-	width: 228px;
-	height: 56px;
-	padding: 10px 0px 0px 35px;
+	width: 200px;
+	height: 50px;
+	padding: 35px 0px 0px 35px;
 	transition: .4s;
 }
+
 /* ワイトロゴにマウスが乗ったとき */
 .wait-logo:hover {
 	opacity: .7;

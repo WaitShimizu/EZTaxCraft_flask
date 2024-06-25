@@ -22,6 +22,7 @@ input, textarea, button, label {
 .global_setting {
 	position: fixed;
 	right: 1%;
+	top: 20px;
 }
 
 .global_setting img {

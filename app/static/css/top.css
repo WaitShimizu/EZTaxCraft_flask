@@ -134,6 +134,7 @@ button {
 }
 
 .nav-item {
+	font-size: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center; /* アイテム内のコンテンツを中央揃え */
@@ -144,14 +145,19 @@ button {
 	flex: 1; /* フレックスアイテムの幅を等しく */
 }
 
-@media (max-width: 768px) {
-	/* 画面幅が狭くなると、ナビゲーションリストをスクロール可能にする */
-	.nav-list {
-		overflow-x: auto;
-	}
+/* リスト横アイコンの設定 */
+.nav-item::after {
+	content: '';
+	display: inline-block;
+	background-image: url('../img/navbar.png'); /* ここに画像のパスを入力 */
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	margin: 9px 0px 0px 40px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 	/* 画面幅が狭くなると、ナビゲーションリストをスクロール可能にする */
 	.nav-list {
 		overflow-x: auto;

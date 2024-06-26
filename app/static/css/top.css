@@ -2,16 +2,18 @@
 
 body {
 	background-color: #efefef;
-	font-family:Arial;
+	font-family: Arial, sans-serif;
 	height: 100%;
 }
 
+/* ハンバーガーメニュー */
 .global_setting {
 	position: fixed;
 	right: 1%;
 	top: 20px;
 }
 
+/* ハンバーガーメニューアイコン */
 .global_setting img {
 	height: 30px;
 	width: 30px;
@@ -19,22 +21,18 @@ body {
 
 .body-container {
 	position: relative;
-    background-color: #fff; /* 背景色を設定 */
+	background-color: #fff; /* 背景色を設定 */
 	height: 820px;
 	top: -18px; /* 上部に移動 */
-    padding: 35px 80% 0px 0px; /* 内側の余白を設定 */
+	padding: 35px 80% 0 0; /* 内側の余白を設定 */
 }
 
-/* タブの形状 */
 .tab-menu {
-    display: flex;
-    flex-wrap: wrap;
-	padding-left: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
 	margin-top: 10px;
-}
-
-.tab-menu li {
-	list-style:none;
+	list-style: none;
 	transition: .4s;
 }
 
@@ -42,40 +40,37 @@ body {
 	color: #fff;
 	font-weight: bold;
 	font-size: 17px;
-    display: block;
-    background: #7f7f7f;
-    padding:10px 20px;
+	display: block;
+	background: #7f7f7f;
+	padding: 10px 20px;
 	text-decoration: none;
-	border: #000000 solid 1px;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+	border: 1px solid #000;
+	border-radius: 8px 8px 0 0;
 	width: 130px;
-	text-align:center;
+	text-align: center;
 }
-/* liにactiveクラスがついた時の形状 */
+
 .tab-menu li.active a {
 	color: #447dcf;
-	font-weight: bold;
-	background:#fff;
+	background: #fff;
 	border: none;
 }
 
-/* エリアの表示非表示と形状 */
 .area {
-	display: none;/* はじめは非表示 */
-	opacity: 0;/* 透過0 */
-	padding:50px 20px;
+	display: none; /* はじめは非表示 */
+	opacity: 0; /* 透過0 */
+	padding: 50px 20px;
+	position: absolute;
+	left: 10px;
+	right: 10px;
 }
 
-/* areaにis-activeというクラスがついた時の形状 */
 .area.is-active {
-    display: block;/*表示*/
-    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+	display: block; /* 表示 */
+	animation: displayAnime 2s forwards;
 }
 
-@keyframes displayAnime{
+@keyframes displayAnime {
 	from {
 		opacity: 0;
 	}
@@ -87,11 +82,10 @@ body {
 .wait-logo {
 	width: 200px;
 	height: 50px;
-	padding: 0px 0px 0px 35px;
+	padding: 0 0 0 35px;
 	transition: .4s;
 }
 
-/* ボタンの基本スタイル */
 button {
 	width: 140px;
 	height: 50px;
@@ -100,13 +94,11 @@ button {
 	font-weight: bold;
 	color: #fff;
 	border: 1px solid;  /* 太さ 種類 色 */
-	border-top-left-radius: 8px;
-	border-bottom-right-radius: 8px;
+	border-radius: 8px 0px 8px 0px; /* ボタンの角の丸み */
 	transition: .4s;
 	margin: 5px; /* ボタン同士の間隔を空ける */
 }
 
-/* 各ボタンのスタイル */
 #btn-login {
 	background: #5b9bd5;
 	border-color: #4c81ca;
@@ -117,7 +109,6 @@ button {
 	border-color: #c55a11;
 }
 
-/* ボタンを右端に固定し横に並べるためのスタイル */
 .btn-container {
 	position: absolute;
 	top: 25px; /* 上からの位置を調整 */
@@ -126,7 +117,6 @@ button {
 	flex-direction: row; /* ボタンを横に並べる */
 }
 
-/* マウスがボタンに乗ったとき */
 .tab-menu li:hover,
 .wait-logo:hover,
 #btn-login:hover,
@@ -135,41 +125,35 @@ button {
 }
 
 .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: nowrap; /* 初期設定では折り返さない */
-    width: 100%; /* リスト全体を画面いっぱいに広げる */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: nowrap; /* 初期設定では折り返さない */
+	width: 100%; /* リスト全体を画面いっぱいに広げる */
 }
 
 .nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* アイテム内のコンテンツを中央揃え */
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box; /* ボックスサイズをボーダーとパディングを含める */
-    white-space: nowrap; /* テキストを折り返さない */
-    flex: 1; /* フレックスアイテムの幅を等しく */
+	display: flex;
+	align-items: center;
+	justify-content: center; /* アイテム内のコンテンツを中央揃え */
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box; /* ボックスサイズをボーダーとパディングを含める */
+	white-space: nowrap; /* テキストを折り返さない */
+	flex: 1; /* フレックスアイテムの幅を等しく */
 }
 
-/* メディアクエリ: 画面幅が768px以下の場合 */
 @media (max-width: 768px) {
-    .nav-list {
-        flex-wrap: wrap; /* 画面幅が狭くなると折り返しを許可 */
-    }
-
-    .nav-item {
-        flex: 1 1 calc(50% - 2px); /* 2つのアイテムが並ぶように設定（境界線のスペースを考慮） */
-        margin-bottom: 2px; /* 境界線のスペースを考慮 */
-    }
+	/* 画面幅が狭くなると、ナビゲーションリストをスクロール可能にする */
+	.nav-list {
+		overflow-x: auto;
+	}
 }
 
-/* メディアクエリ: 画面幅が480px以下の場合 */
 @media (max-width: 480px) {
-    .nav-item {
-        flex: 1 1 100%; /* 1つのアイテムが並ぶように設定 */
-        margin-bottom: 2px; /* 境界線のスペースを考慮 */
-    }
+	/* 画面幅が狭くなると、ナビゲーションリストをスクロール可能にする */
+	.nav-list {
+		overflow-x: auto;
+	}
 }

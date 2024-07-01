@@ -6,19 +6,28 @@ body {
 	height: 100%;
 }
 
-/* ハンバーガーメニュー */
+/* ------ ハンバーガーメニューの設定 ------ */
 .global_setting {
 	position: fixed;
 	right: 1%;
 	top: 20px;
 }
 
-/* ハンバーガーメニューアイコン */
+/* ------ ハンバーガーメニューアイコンの設定 ------ */
 .global_setting img {
 	height: 30px;
 	width: 30px;
 }
 
+/* ------ ワイトロゴの設定 ------ */
+.wait-logo {
+	width: 200px;
+	height: 50px;
+	padding: 0 0 0 35px;
+	transition: .4s;
+}
+
+/* ------ メインコンテンツの設定 ------ */
 .body-container {
 	position: relative;
 	background-color: #fff; /* 背景色を設定 */
@@ -27,6 +36,7 @@ body {
 	padding: 35px 80% 0 0; /* 内側の余白を設定 */
 }
 
+/* ------ タブメニューの設定 ------ */
 .tab-menu {
 	display: flex;
 	flex-wrap: wrap;
@@ -79,24 +89,19 @@ body {
 	}
 }
 
-.wait-logo {
-	width: 200px;
-	height: 50px;
-	padding: 0 0 0 35px;
-	transition: .4s;
-}
-
-button {
+/* ------ ボタンの設定 ------ */
+#btn-login,
+#btn-user-regist {
 	width: 140px;
 	height: 50px;
 	font-size: 18px;
 	text-align: center;
 	font-weight: bold;
 	color: #fff;
-	border: 1px solid;  /* 太さ 種類 色 */
+	border: 1px solid;  /* 太さ 種類 */
 	border-radius: 8px 0px 8px 0px; /* ボタンの角の丸み */
 	transition: .4s;
-	margin: 5px; /* ボタン同士の間隔を空ける */
+	margin: 2px; /* ボタン同士の間隔を空ける */
 }
 
 #btn-login {
@@ -111,7 +116,7 @@ button {
 
 .btn-container {
 	position: absolute;
-	top: 25px; /* 上からの位置を調整 */
+	top: 35px; /* 上からの位置を調整 */
 	right: 30px; /* 右端からの位置を調整 */
 	display: flex;
 	flex-direction: row; /* ボタンを横に並べる */
@@ -124,6 +129,7 @@ button {
 	opacity: .7;
 }
 
+/* ------ ナビゲーションバーの設定 ------ */
 .nav-list {
 	list-style-type: none;
 	padding: 0;
@@ -134,7 +140,7 @@ button {
 }
 
 .nav-item {
-	font-size: 25px;
+	font-size: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center; /* アイテム内のコンテンツを中央揃え */
@@ -145,16 +151,15 @@ button {
 	flex: 1; /* フレックスアイテムの幅を等しく */
 }
 
-/* リスト横アイコンの設定 */
 .nav-item::after {
 	content: '';
-	display: inline-block;
-	background-image: url('../img/navbar.png'); /* ここに画像のパスを入力 */
 	background-size: contain;
 	background-repeat: no-repeat;
+	/* ------ リスト横アイコンの設定 ------ */
+	background-image: url('../img/navbar.png'); /* 画像のパスを入力 */
 	width: 40px;
-	height: 40px;
-	margin: 9px 0px 0px 40px;
+	height: 30px;
+	margin: 4px 0px 0px 40px;
 }
 
 @media (max-width: 768px) {
@@ -162,4 +167,66 @@ button {
 	.nav-list {
 		overflow-x: auto;
 	}
+}
+
+/* ------ バナーの設定 ------ */
+.banner {
+    position: absolute;
+    top: 30%; /* 親要素の30%下にずらす */
+    left: 50%; /* 親要素の50%右にずらす */
+    transform: translate(-50%, -50%); /* バナーを中央に配置する */
+    background-color: #fff2cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* 子要素を折り返さずに一行に固定 */
+    width: 72%; /* 画面幅の72%に設定 */
+    height: auto; /* 高さを自動調整に変更 */
+    border: 2px solid #ED7D31;
+    border-radius: 8px;
+    padding: 5px; /* 枠の縦の大きさ */
+    box-sizing: border-box; /* パディングを含めた幅と高さを計算 */
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        width: 90%; /* 画面幅が768px以下の場合は90%に設定 */
+        padding: 20px; /* パディングを増やして要素間の余白を確保 */
+        align-items: flex-start; /* 子要素を左揃え */
+    }
+}
+
+/* ------ バナーラベルの設定 ------ */
+.banner-label {
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 17px;
+    background: linear-gradient(-135deg, /* 角度 */
+                                transparent 6px, /* 位置 */
+                                #ED7D31 0) top right; /* グラデーションの位置 */
+    white-space: nowrap; /* テキストを1行に固定 */
+    margin-right: 10px; /* ラベルと内容の間に余白を追加 */
+}
+
+/* バナーコンテンツの設定 */
+.banner-content {
+    color: #ED7D31;
+    flex-grow: 1; /* コンテンツがスペースを取れるようにする */
+    white-space: normal; /* テキストを折り返す */
+    word-wrap: break-word; /* 長い単語を折り返す */
+    overflow-wrap: break-word; /* 長い単語を折り返す（word-wrapの後継） */
+    margin-right: 10px; /* コンテンツとボタンの間に余白を追加 */
+    text-align: left; /* テキストを左揃えにする */
+}
+
+/* バナーボタンの設定 */
+.banner-btn {
+	border: none; /* ボタン自体に枠線は不要 */
+    background-color: transparent; /* ボタンの背景を透明に */
+}
+
+.banner-btn img {
+	width: 100px;
 }

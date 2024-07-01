@@ -8,9 +8,11 @@
         <script src="https://kit.fontawesome.com/be91c86e75.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <ul class="tab_menu">
+        <!-- 画面右上部のハンバーガーメニューアイコン -->
+        <a href="/top" class="global_setting"><img src="static/img/global_setting.png" alt="メニューボタン"></a>
+        <ul class="tab-menu">
             <li>
-                <a href="registered.html">登録済みの方</a>
+                <a href="#registered">登録済みの方</a>
             </li>
             <li>
                 <a href="#unregistered">未登録の方</a>
@@ -19,41 +21,51 @@
                 <a href="#usage">使い方</a>
             </li>
         </ul>
-        <div class="body-header">
-            <a href="/top"><img class="wait-logo" src="static/img/wait-logo.png" alt="ワイトロゴ"></a>
-            <a href="/login"><button id="btn-login">ログイン</button></a>
-            <a href="/user_regist"><button id="btn-user-regist" type="submit">ユーザー登録</button></a>
+        <div class="body-container">
+            <div class="body-header">
+                <a href="/top"><img class="wait-logo" src="static/img/wait-logo.png" alt="ワイトロゴ"></a>
+                <div class="btn-container">
+                    <a href="/login"><button id="btn-login">ログイン</button></a>
+                    <a href="/user_regist"><button id="btn-user-regist">ユーザー登録</button></a>
+                </div>
+            </div>
+            <div id="registered" class="area">
+                <ul class="nav-list">
+                    <li class="nav-item">帳票をつける</li>
+                    <li class="nav-item">帳簿を確認する</li>
+                    <li class="nav-item">帳簿を出力する</li>
+                    <li class="nav-item">申告書を作成する</li>
+                </ul>
+            </div><!--/area-->
+            <div id="unregistered" class="area">
+                <ul class="nav-list">
+                    <li class="nav-item">登録方法</li>
+                    <li class="nav-item">登録後に出来ること</li>
+                    <li class="nav-item">よくある質問</li>
+                    <li class="nav-item">お知らせについて</li>
+                </ul>
+            </div><!--/area-->
+            <div id="usage" class="area">
+                <ul class="nav-list">
+                    <li class="nav-item">帳簿の付け方</li>
+                    <li class="nav-item">帳簿の確認方法</li>
+                    <li class="nav-item">帳簿の出力方法</li>
+                    <li class="nav-item">申告書の作成方法</li>
+                </ul>
+            </div><!--/area-->
+            <!-- バナー -->
+            <div class="banner">
+                <label class="banner-label">重要なお知らせ</label>
+                <div class="banner-content">かんたん帳簿-Ver1.2.34がリリースされました</div>
+                <button class="banner-btn" type="button">
+                    <img src="static/img/infomation_list.png">
+                </button>
+            </div>
         </div>
-        <div id="registered" class="area">
-            <h2>かんたん帳簿</h2>
-            <ul>
-                <li>帳簿を付ける</li>
-                <li>帳簿を確認する</li>
-                <li>帳簿を出力する</li>
-                <li>申告書を作成する</li>
-            </ul>
-        </div><!--/area-->
-        <div id="unregistered" class="area">
-            <h2>かんたん帳簿</h2>
-            <ul>
-                <li>登録方法</li>
-                <li>登録後に出来ること</li>
-                <li>よくある質問</li>
-                <li>お知らせについて</li>
-            </ul>
-        </div><!--/area-->
-        <div id="usage" class="area">
-            <h2>かんたん帳簿</h2>
-            <ul>
-                <li>帳簿の付け方</li>
-                <li>帳簿の確認方法</li>
-                <li>帳簿の出力方法</li>
-                <li>申告書の作成方法</li>
-            </ul>
-        </div><!--/area-->
-
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
         <script src="./static/js/top_tab_ctrl.js"></script>
+        <script src="./static/js/top_btn_ctrl.js"></script>
     </body>
 </html>

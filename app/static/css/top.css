@@ -2,63 +2,85 @@
 
 body {
 	background-color: #efefef;
-	font-family:Arial;
+	font-family: Arial, sans-serif;
 	height: 100%;
 }
 
-/* タブの形状 */
-.tab_menu {
-    display: flex;
-    flex-wrap: wrap;
-	padding-left: 0px;
-	margin-top: 10px;
+/* ------ ハンバーガーメニューの設定 ------ */
+.global_setting {
+	position: fixed;
+	right: 1%;
+	top: 20px;
 }
 
-.tab_menu li {
-	list-style:none;
+/* ------ ハンバーガーメニューアイコンの設定 ------ */
+.global_setting img {
+	height: 30px;
+	width: 30px;
+}
+
+/* ------ ワイトロゴの設定 ------ */
+.wait-logo {
+	width: 200px;
+	height: 50px;
+	padding: 0 0 0 35px;
 	transition: .4s;
 }
-.tab_menu li:hover {
-	opacity: .7;
+
+/* ------ メインコンテンツの設定 ------ */
+.body-container {
+	position: relative;
+	background-color: #fff; /* 背景色を設定 */
+	height: 820px;
+	top: -18px; /* 上部に移動 */
+	padding: 35px 80% 0 0; /* 内側の余白を設定 */
 }
 
-.tab_menu li a {
+/* ------ タブメニューの設定 ------ */
+.tab-menu {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-top: 10px;
+	list-style: none;
+	transition: .4s;
+}
+
+.tab-menu li a {
 	color: #fff;
 	font-weight: bold;
 	font-size: 17px;
-    display: block;
-    background: #7f7f7f;
-    padding:10px 20px;
+	display: block;
+	background: #7f7f7f;
+	padding: 10px 20px;
 	text-decoration: none;
-	border: #000000 solid 1px;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+	border: 1px solid #000;
+	border-radius: 8px 8px 0 0;
 	width: 130px;
-	text-align:center;
+	text-align: center;
 }
-/* liにactiveクラスがついた時の形状 */
-.tab_menu li.active a {
+
+.tab-menu li.active a {
 	color: #447dcf;
-	font-weight: bold;
-	background:#fff;
+	background: #fff;
+	border: none;
 }
 
-/* エリアの表示非表示と形状 */
 .area {
-	display: none;/* はじめは非表示 */
-	opacity: 0;/* 透過0 */
-	padding:50px 20px;
+	display: none; /* はじめは非表示 */
+	opacity: 0; /* 透過0 */
+	padding: 50px 20px;
+	position: absolute;
+	left: 10px;
+	right: 10px;
 }
 
-/* areaにis-activeというクラスがついた時の形状 */
 .area.is-active {
-    display: block;/*表示*/
-    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+	display: block; /* 表示 */
+	animation: displayAnime 2s forwards;
 }
 
-@keyframes displayAnime{
+@keyframes displayAnime {
 	from {
 		opacity: 0;
 	}
@@ -67,63 +89,144 @@ body {
 	}
 }
 
-.wait-logo {
-	width: 170px;
+/* ------ ボタンの設定 ------ */
+#btn-login,
+#btn-user-regist {
+	width: 140px;
 	height: 50px;
-	padding: 10px 0px 0px 35px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	border: 1px solid;  /* 太さ 種類 */
+	border-radius: 8px 0px 8px 0px; /* ボタンの角の丸み */
 	transition: .4s;
-}
-/* マウスがボタンに乗ったとき */
-.wait-logo:hover {
-	opacity: .7;
-}
-
-.menu-icon {
-	width: 35px;
-	height: 30px;
-	left: 80%;
-	transition: .4s;
-	position: relative;
+	margin: 2px; /* ボタン同士の間隔を空ける */
 }
 
 #btn-login {
-    position: absolute;
-	top:90px;
-	left: 700px;
-	width: 140px;
-	height:50px;
-	font-size: 18px;
-	text-align: center;
-	font-weight: bold;
-	color: #fff;
 	background: #5b9bd5;
-	border: 1px solid #4c81ca; /* 太さ 種類 色 */
-	border-top-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	transition: .4s;
-}
-/* マウスがボタンに乗ったとき */
-#btn-login:hover {
-	opacity: .7;
+	border-color: #4c81ca;
 }
 
 #btn-user-regist {
-    position: absolute;
-	top:90px;
-	left: 840px;
-	width: 140px;
-	height:50px;
-	font-size: 18px;
-	text-align: center;
-	font-weight: bold;
-	color: #fff;
 	background: #ed7d31;
-	border: 1px solid #c55a11; /* 太さ 種類 色 */
-	border-top-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	transition: .4s;
+	border-color: #c55a11;
 }
-/* マウスがボタンに乗ったとき */
+
+.btn-container {
+	position: absolute;
+	top: 35px; /* 上からの位置を調整 */
+	right: 30px; /* 右端からの位置を調整 */
+	display: flex;
+	flex-direction: row; /* ボタンを横に並べる */
+}
+
+.tab-menu li:hover,
+.wait-logo:hover,
+#btn-login:hover,
 #btn-user-regist:hover {
 	opacity: .7;
+}
+
+/* ------ ナビゲーションバーの設定 ------ */
+.nav-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: nowrap; /* 初期設定では折り返さない */
+	width: 100%; /* リスト全体を画面いっぱいに広げる */
+}
+
+.nav-item {
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center; /* アイテム内のコンテンツを中央揃え */
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box; /* ボックスサイズをボーダーとパディングを含める */
+	white-space: nowrap; /* テキストを折り返さない */
+	flex: 1; /* フレックスアイテムの幅を等しく */
+}
+
+.nav-item::after {
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+	/* ------ リスト横アイコンの設定 ------ */
+	background-image: url('../img/navbar.png'); /* 画像のパスを入力 */
+	width: 40px;
+	height: 30px;
+	margin: 4px 0px 0px 40px;
+}
+
+@media (max-width: 768px) {
+	/* 画面幅が狭くなると、ナビゲーションリストをスクロール可能にする */
+	.nav-list {
+		overflow-x: auto;
+	}
+}
+
+/* ------ バナーの設定 ------ */
+.banner {
+    position: absolute;
+    top: 30%; /* 親要素の30%下にずらす */
+    left: 50%; /* 親要素の50%右にずらす */
+    transform: translate(-50%, -50%); /* バナーを中央に配置する */
+    background-color: #fff2cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* 子要素を折り返さずに一行に固定 */
+    width: 72%; /* 画面幅の72%に設定 */
+    height: auto; /* 高さを自動調整に変更 */
+    border: 2px solid #ED7D31;
+    border-radius: 8px;
+    padding: 5px; /* 枠の縦の大きさ */
+    box-sizing: border-box; /* パディングを含めた幅と高さを計算 */
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        width: 90%; /* 画面幅が768px以下の場合は90%に設定 */
+        padding: 20px; /* パディングを増やして要素間の余白を確保 */
+        align-items: flex-start; /* 子要素を左揃え */
+    }
+}
+
+/* ------ バナーラベルの設定 ------ */
+.banner-label {
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 17px;
+    background: linear-gradient(-135deg, /* 角度 */
+                                transparent 6px, /* 位置 */
+                                #ED7D31 0) top right; /* グラデーションの位置 */
+    white-space: nowrap; /* テキストを1行に固定 */
+    margin-right: 10px; /* ラベルと内容の間に余白を追加 */
+}
+
+/* バナーコンテンツの設定 */
+.banner-content {
+    color: #ED7D31;
+    flex-grow: 1; /* コンテンツがスペースを取れるようにする */
+    white-space: normal; /* テキストを折り返す */
+    word-wrap: break-word; /* 長い単語を折り返す */
+    overflow-wrap: break-word; /* 長い単語を折り返す（word-wrapの後継） */
+    margin-right: 10px; /* コンテンツとボタンの間に余白を追加 */
+    text-align: left; /* テキストを左揃えにする */
+}
+
+/* バナーボタンの設定 */
+.banner-btn {
+	border: none; /* ボタン自体に枠線は不要 */
+    background-color: transparent; /* ボタンの背景を透明に */
+}
+
+.banner-btn img {
+	width: 100px;
 }

@@ -19,18 +19,25 @@ input, textarea, button, label {
 }
 
 /* メニューアイコン */
-.menu-icon {
+.global_setting {
 	position: fixed;
 	right: 1%;
+	top: 20px;
+}
+
+.global_setting img {
+	height: 30px;
+	width: 30px;
 }
 
 /* ワイトロゴ */
 .wait-logo {
-	width: 228px;
-	height: 56px;
-	padding: 10px 0px 0px 35px;
+	width: 200px;
+	height: 50px;
+	padding: 35px 0px 0px 35px;
 	transition: .4s;
 }
+
 /* ワイトロゴにマウスが乗ったとき */
 .wait-logo:hover {
 	opacity: .7;
@@ -230,15 +237,15 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked:before {
-position: absolute;
-top: 1px;
-left: 4px;
-transform: rotate(50deg);
-width: 4px;
-height: 8px;
-border-right: 2px solid #fff;
-border-bottom: 2px solid #fff;
-content: '';
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	transform: rotate(50deg);
+	width: 4px;
+	height: 8px;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	content: '';
 }
 
 #btn-eye {

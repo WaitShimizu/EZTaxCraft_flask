@@ -1,0 +1,42 @@
+<!-- ユーザー登録フォーム -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ユーザー情報登録画面用のCSSファイル読み込み -->
+        <link rel="stylesheet" href="./static/css/user_info_regist.css">
+        <title>ユーザー情報</title>
+    </head>
+    <body>
+        <!-- 画面右上部のハンバーガーメニューアイコン -->
+        <a href="/top" class="global_setting"><img src="static/img/global_setting.png" alt="メニューボタン"></a>
+        <!-- ユーザー情報登録タブのラベル -->
+        <label class="tab-label">ユーザー情報</label>
+
+        <div class="user-regist-info-tab" role="tabpanel">
+            <a href="/top"><img class="wait-logo" src="static/img/wait-logo.png" alt="ワイトロゴ"></a>
+            <div class="form-wrapper">
+                <form id="myForm" method="post" action="/user-info-regist">
+                    <div class="form-item">
+                        <!-- 氏名入力フォーム -->
+                        <div class="form-item_user-name">
+                            <label for="email">氏名</label>
+                            <input type="text"  id="name" name="name" placeholder="姓名"></input>
+                        </div>
+                        <!-- フリガナ入力フォーム -->
+                        <div class="form-item_name-ruby">
+                            <label for="email">フリガナ</label>
+                            <input type="text"  id="name" name="name" placeholder="セイメイ"></input>
+                        </div>
+                        <!-- 申告住所入力フォーム -->
+                        <div class="form-item_user-address">
+                            <label for="email">申告する住所</label>
+                            <input type="text"  id="address" name="address" placeholder="東京都新宿1-1"></input>
+                        </div>
+                    </div>
+                    <button id="btn-regist-info" type="submit" disabled = true>ユーザー情報登録</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

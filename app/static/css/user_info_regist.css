@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* 画面全体 */
+body {
+	background: #efefef;
+	/* Arialを使い、フォールバックにsans-serifを追加 */
+	font-family: Arial, sans-serif;
+	height: 100%;
+}
+
+/* フォントの継承を強制 */
+* {
+    font-family: inherit; /* 親要素からフォントを継承 */
+}
+
+/* 入力フィールドや他の要素にもフォントを継承させる */
+input, textarea, button, label {
+    font-family: inherit; /* 親要素からフォントを継承 */
+}
+
+/* メニューアイコン */
+.global_setting {
+	position: fixed;
+	right: 1%;
+	top: 20px;
+}
+
+.global_setting img {
+	height: 30px;
+	width: 30px;
+}
+
+/* ワイトロゴ */
+.wait-logo {
+	width: 200px;
+	height: 50px;
+	padding: 35px 0px 0px 35px;
+	transition: .4s;
+}
+
+/*ラベルのラジオボタンを全て非表示に*/
+input[name="tab-radio"] {
+	display: none;
+}
+
+/* 画面左上のタブ */
+.tab-label{
+	background: #fff;
+	color: #447dcf;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 10px 20px;
+	display: block;
+	float: left;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	width: 140px;
+	text-align: center;
+}
+
+.user-regist-info-tab {
+	background: #fff;
+	height: 870px;
+	clear: both;
+}
+
+.form-wrapper {
+	text-align: center;
+	background: #BDD7EE;
+	padding-top: 30px;
+	margin: 3% auto;
+	max-width: 400px;
+	height: 38%;
+}
+
+.form-item {
+	color: #fff;
+	font-weight: bold;
+    font-size: 20px;
+}
+
+/* 氏名ラベルの先頭を入力フォームに合わせる */
+.form-item_user-name label {
+    padding-right: 300px;
+}
+
+.form-item_user-name input {
+	border-radius:0.2rem;
+	border: none;
+	padding: 8px;
+	width: 80%;
+}
+
+.form-item_name-ruby input{
+	border-radius:0.2rem;
+	border: none;
+	padding: 8px;
+	width: 80%;
+}
+
+/* フリガナラベルの先頭を入力フォームに合わせる */
+.form-item_name-ruby label {
+    padding-right: 260px;
+}
+
+.form-item_user-address input{
+	border-radius:0.2rem;
+	border: none;
+	padding: 8px;
+	width: 80%;
+}
+
+/* フリガナラベルの先頭を入力フォームに合わせる */
+.form-item_user-address label {
+    padding-right: 220px;
+}
+
+/* 各入力フォーム同士の空間 */
+.form-item_name-ruby,
+.form-item_user-address {
+    padding-top: 20px;
+}
+
+::placeholder {
+	font-size: 15px;
+	padding: 0px 5px; /* 上、右 */
+	color: #a6a6a6;
+}
+
+#btn-regist-info {
+	background: #5B9BD5;
+	color: #fff;
+	border: 1px solid #4472C4;
+	font-weight: bold; /* 文字を太くする */
+	font-size: 19px;
+	width: 190px; /* 丸の横幅 */
+  	height: 38px; /* 丸の高さ */
+	position:relative;
+	top: 30px;
+	text-align: center;
+	border-radius: 6px;
+	transition: .4s;
+	cursor: pointer;/* ポインターカーソルを表示 */
+}
+
+/* マウスがボタンに乗ったとき */
+.wait-logo:hover,
+#btn-regist-info:hover {
+	opacity: .7;
+}

@@ -46,25 +46,7 @@ def mypage():
 
 @app.route('/user-info-regist', methods=['GET', 'POST'])
 def user_info_regist():
-    email = request.form["email"]
-    password = request.form["password"]
-    repassword = request.form["repassword"]
-    html = f"""
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>応答確認</title>
-    <script src="./static/js/sample.js"></script>
-  </head>
-
-  <body>
-    <p>入力されたユーザーID：{email}</p>
-    <p>入力されたパスワード：{password}</p>
-    <p>再入力されたパスワード：{repassword}</p>
-  </body>
-</html>
-    """
+    html = render_template('user_info_regist.html')
     return html
 
 if __name__ == "__main__":

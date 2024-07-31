@@ -39,7 +39,7 @@
                         <div class="form-item_repassword">
                             <label for="password">パスワード再入力</label>
                             <div class="form-item_repassword-input">
-                                <input id="re-password" type="password" name="password" required="required" placeholder="半角英数字8文字以上20文字以内"></input>
+                                <input id="re-password" type="password" name="repassword" required="required" placeholder="半角英数字8文字以上20文字以内"></input>
                                 <button id="re-view" onclick="onClickPassView('re-view', 're-password')" for="password" class="far fa-eye" type="button"></button>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                     <p class="agreement-link">※<a href="https://www.google.co.jp/">こちら</a> から利用規約事項を確認してください</p>
                     <p class="agreement-y">利用規約に同意します</p>
                     <input type="checkbox" name="agreement" id="agreement">
-                    <button id="btn-regist" type="submit" disabled = true>ユーザー登録</button>
+                    <button id="btn-regist" type="submit" onclick="location.href='user_info_regist.html'" disabled = true >ユーザー登録</button>
                 </form>
             </div>
         </div>

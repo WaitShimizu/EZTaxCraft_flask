@@ -25,24 +25,29 @@ def user_regist():
 
 @app.route('/mypage', methods=['GET', 'POST'])
 def mypage():
-    email = request.form["email"]
-    password = request.form["password"]
-    html = f"""
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>応答確認</title>
-    <script src="./static/js/sample.js"></script>
-  </head>
-
-  <body>
-    <p>入力されたユーザーID：{email}</p>
-    <p>入力されたパスワード：{password}</p>
-  </body>
-</html>
-    """
+    html = render_template('mypage.html')
     return html
+
+# @app.route('/mypage', methods=['GET', 'POST'])
+# def mypage():
+#     email = request.form["email"]
+#     password = request.form["password"]
+#     html = f"""
+# <!DOCTYPE html>
+# <html lang="ja">
+#   <head>
+#     <meta charset="utf-8">
+#     <title>応答確認</title>
+#     <script src="./static/js/sample.js"></script>
+#   </head>
+
+#   <body>
+#     <p>入力されたユーザーID：{email}</p>
+#     <p>入力されたパスワード：{password}</p>
+#   </body>
+# </html>
+#     """
+#     return html
 
 @app.route('/user-info-regist', methods=['GET', 'POST'])
 def user_info_regist():

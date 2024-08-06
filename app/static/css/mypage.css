@@ -41,6 +41,7 @@
     /* 枠線を追加 */
     border: 1px solid #ccc;
     transition: .4s;
+    padding-left: 30px;
 }
 
 /* 最後のリストアイテムには枠線を適用しない */

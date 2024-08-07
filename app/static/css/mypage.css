@@ -9,11 +9,41 @@
     text-decoration: none;
 }
 
+/* ワイトロゴ */
+.wait-logo {
+	width: 230px;
+    height: 60px;
+	transition: .4s;
+    position: fixed;
+    top: 70px;
+    left: calc(50% + 125px); /* 横中央 + サイドバー幅 */
+    transform: translate(-50%, -50%);
+}
+/* マウスがボタンに乗ったとき */
+.wait-logo:hover {
+	opacity: .7;
+}
+
+.bug-content {
+    color: #ed7d31;
+    z-index: 2;
+    position: absolute;
+    top: 170px;
+    left: calc(50% + 125px); /* 横中央 + サイドバー幅 */
+    transform: translate(-50%, -50%);
+}
+
+.bug-content a {
+    color: #ed7d31;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .sidebar {
     position: fixed;
+    background: #fff;
     left: 0;
     top: 0;
-    background: #fff;
     width: 250px;
     height: 100%;
     border-right: 1px solid #ccc;
@@ -33,6 +63,7 @@
 
 .sidebar ul a {
     font-size: 19px;
+    color: #447dcf;
     font-weight: bold;
     display: block;
     height: 100%;
@@ -51,5 +82,5 @@
 
 .sidebar li:hover {
 	opacity: .7;
-    background: #447dcf;
+    background: #ed7d31;
 }

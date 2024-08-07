@@ -9,9 +9,9 @@ const list = [
 // 各リストアイテムに対応するURLと定義
 const links = [
                 'https://www.google.co.jp/',
-                'https://www.google.co.jp/',
-                'https://www.google.co.jp/',
-                'https://www.google.co.jp/',
+                'https://www.yahoo.co.jp/',
+                'https://www.youtube.com/',
+                'https://xn--u9jv84l7ea468b.com/',
                 'https://www.google.co.jp/',
                 'https://www.google.co.jp/',
                 'https://www.google.co.jp/',
